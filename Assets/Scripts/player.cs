@@ -10,7 +10,7 @@ public class player : MonoBehaviour {
     void Update () {
 
           //Jump
-        if(Input.GetKeyUp("space"))
+        if(Input.GetKeyUp("space")) //use the space key on your keyboard.
         {
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             GetComponent<Rigidbody2D>().AddForce(jumpForce);  //Jael jumpforce was initialized with a value called new Vector2 at the start fo this program.
