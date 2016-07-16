@@ -6,13 +6,7 @@ public class player : MonoBehaviour {
     //The force which is added when the player jumps
     //This can be chaneged in the Inspector window
     public Vector2 jumpForce = new Vector2(0, 300); //vector 2 stores two values x (left to right vertical) and y(up and down horiztonal)
-    public Rigidbody2D rb;
-    // Update is called once per frame
-     void Start()
-    {
-        rb = GetComponent<Rigidbody2D>(); //give me the conponemt of Rigidbody
-    }
-
+    
     void Update () {
 
           //Jump
