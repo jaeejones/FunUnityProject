@@ -16,6 +16,22 @@ public class player : MonoBehaviour {
             GetComponent<Rigidbody2D>().AddForce(jumpForce);  //Jael jumpforce was initialized with a value called new Vector2 at the start fo this program.
    
         }
-	
-	}
+
+        //die by being off screen
+        Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        if(screenPosition.y > Screen.height || screenPosition.y < 0)
+        {
+            Die();
+        }
+     }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        Die();
+    }
+
+    void Die()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
 }
+
